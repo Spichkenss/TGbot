@@ -1,5 +1,5 @@
 import keyboards as kb
-import telebot, bs4, requests
+import telebot, bs4, requests, re
 
 
 # TOKEN
@@ -28,7 +28,7 @@ def greeting(message):
 # Погода
 url = 'http://api.openweathermap.org/data/2.5/weather'
 api_weather = '489f45987eb92460dc4955babb3bbeec'
-api_telegram = '1791715945:AAHF0exJ-9gTdfhv5PXziJVugzQN3I1w0eI'
+api_telegram = 'TOKEN'
 @bot.message_handler(commands=['weather'])
 def setlocation(message):
     location = bot.send_message(message.chat.id, 'Выберете город:')
